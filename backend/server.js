@@ -2,6 +2,7 @@ const express=require('express');
 const dbconnect=require('./dbconnection/db');
 const userroute=require('./routes/userroute');
 const jobsroute=require('./routes/jobsroute');
+const applicationroute=require('./routes/applicationroute')
 const bodyparser=require('body-parser')
 const cors=require('cors')
 const app=express()
@@ -16,6 +17,7 @@ app.use(bodyparser.urlencoded({ extended: true })); // for parsing application/x
 dbconnect();
 app.use('/api',userroute);
 app.use('/api/jobs',jobsroute)
+app.use('/api/application',applicationroute)
 
 
     
