@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
 // import Footer from './Footer';
 
 const Dashboard = ({ ContentComponent }) => {
@@ -8,7 +8,7 @@ const Dashboard = ({ ContentComponent }) => {
       }
   return (
     <div>
-{/* <Navbar/> */}
+<Navbar/>
       <div className="content">
         <ContentComponent /> {/* Render dynamic component */}
       </div>
