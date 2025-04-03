@@ -7,6 +7,9 @@ import Dashboard from './components/Dashboard';
 import About from './components/About';
 import Jobs from './components/Jobs';
 import Applications from './components/Applications';
+import Adminjobs from './components/Adminjobs';
+import UserApplications from './components/UserApplications';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -49,14 +52,16 @@ function App() {
           <>
             <Route path="/about" element={<Dashboard ContentComponent={About} handleLogout={handleLogout} />} />
             <Route path="/jobs" element={<Dashboard ContentComponent={Jobs} handleLogout={handleLogout} />} />
-            <Route path="/applications" element={<Dashboard ContentComponent={Applications} handleLogout={handleLogout} />} />
+            <Route path="/at" element={<Dashboard ContentComponent={UserApplications} handleLogout={handleLogout} />} />
           </>
         )}
 
         {isLoggedIn && role === 'admin' && (
           <>
+            <Route path="/adminjobs" element={<Dashboard ContentComponent={Adminjobs} handleLogout={handleLogout} />} />
            <Route path="/about" element={<Dashboard ContentComponent={About} handleLogout={handleLogout} />} />
             <Route path="/admin/home" element={<Dashboard ContentComponent={Home} handleLogout={handleLogout} />} />
+            <Route path="/applications/:jobId" element={<Dashboard ContentComponent={Applications} handleLogout={handleLogout} />} />
           </>
         )}
       </Routes>

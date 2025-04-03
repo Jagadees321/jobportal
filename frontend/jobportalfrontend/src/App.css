@@ -2,7 +2,8 @@
   max-width: 100%;
   margin: 0;
   padding: 0rem;
-  text-align: center;
+  
+  display: block;
 }
 
 .logo {
@@ -39,4 +40,13 @@
 
 .read-the-docs {
   color: #888;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button{
+  padding: 0.4rem;
 }

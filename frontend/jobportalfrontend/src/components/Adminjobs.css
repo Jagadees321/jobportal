@@ -1,0 +1,399 @@
+.jobscontainer{
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+.jobcard{
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    box-shadow: 2px 2px 20px grey;
+    margin: 10px 0px;
+    padding: 3px;
+    border-radius: 5px;
+   
+}
+
+.jobinfo{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.jobinfo img{
+    width: 15%;
+    height: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.jobedit{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:end ;
+    align-items: center;
+    margin-left: -4%;
+}
+.jobedit div button{
+    margin: 3px;
+    width: 40%;
+    font-size: 1.4rem;
+    text-align: center;
+    align-content: center;
+    height: 45px;
+}
+.jobedit div{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.jobcompany{
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    width: 70%;
+    margin-left: -60px;
+    background-color: #ccc;
+}
+.jobcompany p{
+    margin-left: 5%;
+}
+.jobcompany h2{
+    margin-top: -7%;
+    align-content: start;
+    text-align: center;
+}
+.expp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 30px;
+}
+.adminjobstitle{
+    font-size: 2rem;
+
+}
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* 2 Column Form Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn-save {
+    background: #28a745;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-cancel {
+    background: #dc3545;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.jobcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+   
+}
+.jobinfo{
+    width: 90%;
+}
+.jobcard img{
+    width: 10%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5%;
+   margin: 5px 0px;
+}
+.jobcard .jobdetails{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   width: 80%;
+}
+.jobdetails h2{
+    margin-left: -70%;
+}
+.job-meta{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 9px;
+    align-items: center;
+    margin-left: 10px;
+    font-size: medium;
+}
+
+.jobactions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 10%;
+}
+
+.jobactions button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.jobactions button:hover {
+    background: #0056b3;
+}
+
+
+.applications-container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.job-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-role {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.applications-container {
+    width: 90%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.job-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-role {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Grid layout */
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.application-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.application-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.applicant-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.applicant-email {
+    color: #666;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.close-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #c82333;
+}
+
+.application-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+   
+}
+.applicationbodycard{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+.application-item .apnbtn{
+    height: 20%;
+}
+.applicationbodycard h3{
+    margin-left: 30%;
+    margin-bottom: 10px;
+}

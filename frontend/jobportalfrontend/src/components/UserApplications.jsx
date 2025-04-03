@@ -3,20 +3,19 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
 
-const Applications = () => {
+const UserApplications = () => {
     const [applications, setApplications] = useState([]);
     const [job, setJob] = useState(null);
-    const { jobId } = useParams();
+    
     const navigate = useNavigate();
     const [selectedApp, setSelectedApp] = useState(null);
     const [feedback, setFeedback] = useState("");
-
+    let user=JSON.parse(localStorage.getItem('user'))
     const fetchData = async () => {
       try {
-          const jobRes = await axios.get(`http://localhost:2004/api/jobs/${jobId}`);
-          setJob(jobRes.data);
+         
 
-          const appRes = await axios.get(`http://localhost:2004/api/application/getbyjobid/${jobId}`);
+          const appRes = await axios.get(`http://localhost:2004/api/application/getbyuserid/${user._id}`);
           setApplications(appRes.data);
       } catch (error) {
           console.error("Error fetching data:", error);
@@ -25,7 +24,7 @@ const Applications = () => {
     useEffect(() => {
        
         fetchData();
-    }, [jobId]);
+    }, []);
 
     // Open modal for feedback
     const openFeedbackModal = (application) => {
@@ -59,7 +58,7 @@ const Applications = () => {
 
     return (
         <div className="applications-container">
-            <button onClick={() => navigate(-1)} className="back-button" style={{position:"relative",left:"45%" ,top:"30%",margin:"5px 0px"}}>
+            <button onClick={() => navigate(-1)} className="back-button" style={{position:"relative",left:"85%" ,top:"30%",margin:"5px 0px"}}>
                 &larr; Back to Jobs
             </button>
 
@@ -76,6 +75,7 @@ const Applications = () => {
                         <div key={application._id} className="application-item">
                            <div className="applicationbodycard">
                            <h3 className="applicant-name">{application.userid?.username || "Unknown"}</h3>
+                           <h3 className="applicant-name">{application.jobid?.companyname || "Unknown"}</h3>
                             <p className="applicant-email"><strong>Email:</strong> {application.userid?.email || "Not provided"}</p>
                             <p><strong>Status:</strong>{application.status?"seen":"unseen"}</p>         
                             <p><strong style={{marginLeft:'-10px'}}>Description:</strong>{application.description}</p>
@@ -116,4 +116,4 @@ const Applications = () => {
     );
 };
 
-export default Applications;
+export default UserApplications;

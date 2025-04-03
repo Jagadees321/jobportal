@@ -1,0 +1,109 @@
+.footer{
+    display: grid;
+    height: 55vh;
+    background-color: grey;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 5% 20%;
+    grid-template-areas: "con"
+                          "hr"
+                          "copyright";
+}
+
+.footer .con{
+    grid-area: con;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 34% 22% 22% 22%;
+    grid-template-rows: 100%;
+    grid-template-areas: "f1 f2 f3 f4";
+    color: rgb(190, 188, 188);
+}
+.con .f1{
+    grid-area: f1;
+    
+}
+.f1 h2{
+    margin-top: 60px;
+    margin-left: 30px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.f1 p{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.f1 h3{
+    margin-top: 5px;
+    margin-left: 30px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.con .f2{
+    grid-area: f2;
+   
+}
+.f2 h3{
+    margin-top: 60px;
+    margin-left: 6%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.con .f3{
+    grid-area: f3;
+   
+}
+.f3 h3{
+    margin-top: 60px;
+    margin-left: 6%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.con .f4{
+    grid-area: f4;
+   
+}
+.f4 h3{
+    margin-top: 60px;
+    margin-left: 6%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.footer .con .box{
+    height: 100%;
+   
+   
+}
+.footer hr{
+    grid-area: hr;
+    width: 100%;
+}
+.footer .copyright{
+    grid-area: copyright;
+    width: 100%;
+}
+ul li{
+    list-style-type: none;
+    margin-left: -8%;
+
+}
+
+ul li:hover{
+    color: rgb(247, 60, 60);
+}
+
+.copyright{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.copyright h6{
+    color: rgb(237, 229, 229);
+    margin: 0px 10px;
+}
